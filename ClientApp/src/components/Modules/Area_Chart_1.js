@@ -1,70 +1,34 @@
 import React, { Component } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, 
+  PolarAngleAxis, PolarRadiusAxis } from 'recharts';
 
-const data = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
-
-const myComponentStyle = {
-
-  color: 'blue',
-
-  lineHeight: 10,
-
-  padding: '1.5em',
-
-}
-
+    // Sample data
+    const data = [
+      { name: 'A', x: 21 },
+      { name: 'B', x: 22 },
+      { name: 'C', x: -32 },
+      { name: 'D', x: -14 },
+      { name: 'E', x: -51 },
+      { name: 'F', x: 16 },
+      { name: 'G', x: 7 },
+      { name: 'H', x: -8 },
+      { name: 'I', x: 9 },
+  ];
 
 export class Area_Chart_1_Module extends Component {
   
-
   render() {
     return (
-      <div style={myComponentStyle}>
-      <h1>Greetings</h1>
-    </div>
+      
+        <RadarChart height={500} width={500} 
+            outerRadius="80%" data={data}>
+            <PolarGrid />
+            <PolarAngleAxis dataKey="name" />
+            <PolarRadiusAxis />
+            <Radar dataKey="x" stroke="green" 
+                fill="green" fillOpacity={0.5} />
+        </RadarChart>
+    
     );
   }
 }

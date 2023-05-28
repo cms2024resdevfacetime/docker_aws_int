@@ -32,9 +32,7 @@ export class NavMenu extends Component {
               
             
 
-            <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/Comps">Comps</NavLink>
-              </NavItem>
+           
               
               <NavItem>
                 <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
@@ -47,7 +45,11 @@ export class NavMenu extends Component {
               </NavItem>
 
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/Area_Chart_1_Page">Area Chart 1</NavLink>
+                <NavLink tag={Link} className="text-dark" to="/Comps">Comps</NavLink>
+              </NavItem>
+              
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/Area_Chart_1_Page">Pie Chart</NavLink>
               </NavItem>
 
 
