@@ -1,0 +1,95 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/linux-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/linux-x64": {
+      "CCILibrary/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "SymbolSource.Microsoft.Cci.Metadata": "1.66.517"
+        },
+        "runtime": {
+          "CCILibrary.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "SymbolSource.Microsoft.Cci.Metadata/1.66.517": {
+        "runtime": {
+          "lib/net40/Microsoft.Cci.ILGenerator.dll": {
+            "assemblyVersion": "1.66.517.0",
+            "fileVersion": "1.66.517.0"
+          },
+          "lib/net40/Microsoft.Cci.MetadataHelper.dll": {
+            "assemblyVersion": "1.66.517.0",
+            "fileVersion": "1.66.517.0"
+          },
+          "lib/net40/Microsoft.Cci.MetadataModel.dll": {
+            "assemblyVersion": "1.66.517.0",
+            "fileVersion": "1.66.517.0"
+          },
+          "lib/net40/Microsoft.Cci.MutableMetadataModel.dll": {
+            "assemblyVersion": "1.66.517.0",
+            "fileVersion": "1.66.517.0"
+          },
+          "lib/net40/Microsoft.Cci.PdbReader.dll": {
+            "assemblyVersion": "1.66.517.0",
+            "fileVersion": "1.66.517.0"
+          },
+          "lib/net40/Microsoft.Cci.PdbWriter.dll": {
+            "assemblyVersion": "1.66.517.0",
+            "fileVersion": "1.66.517.0"
+          },
+          "lib/net40/Microsoft.Cci.PeReader.dll": {
+            "assemblyVersion": "1.66.517.0",
+            "fileVersion": "1.66.517.0"
+          },
+          "lib/net40/Microsoft.Cci.PeWriter.dll": {
+            "assemblyVersion": "1.66.517.0",
+            "fileVersion": "1.66.517.0"
+          },
+          "lib/net40/Microsoft.Cci.SourceModel.dll": {
+            "assemblyVersion": "1.66.517.0",
+            "fileVersion": "1.66.517.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CCILibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "SymbolSource.Microsoft.Cci.Metadata/1.66.517": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BzuPKmvbfQl2sn4AJ0HNI+Nw4M0sNwiIs0ao6HWiGPBco/awipa898O+PTtBM/xVh/+pRE8xMbyW4QB2XNJ3WA==",
+      "path": "symbolsource.microsoft.cci.metadata/1.66.517",
+      "hashPath": "symbolsource.microsoft.cci.metadata.1.66.517.nupkg.sha512"
+    }
+  }
+}
