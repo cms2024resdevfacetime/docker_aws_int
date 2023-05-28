@@ -2,6 +2,7 @@ import { Counter } from "./components/Counter";
 import { FetchData } from "./components/FetchData";
 import { Home } from "./components/Home";
 import { Comps } from "./components/Comps";
+import { Area_Chart_Page_Component } from "./components/Area_Chart_1_Page";
 
 const AppRoutes = [
   {
@@ -16,9 +17,15 @@ const AppRoutes = [
     path: '/fetch-data',
     element: <FetchData />
   },
+  
   {
     path: '/Comps',
     element: <Comps />
+  },
+
+  {
+    path: '/Area_Chart_1_Page',
+    element: <Area_Chart_Page_Component />
   }
 ];
 
