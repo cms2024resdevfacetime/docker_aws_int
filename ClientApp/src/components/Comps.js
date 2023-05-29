@@ -14,6 +14,7 @@ export class Comps extends Component {
         <h1>Chart</h1>
         <Chart/>
         <h1>Moving Chart</h1>
+        <p>https://www.framer.com/motion/examples/</p>
         <motion.div animate={{ x: 500 }} ><Chart/></motion.div>
         <h1>MathJS</h1>
         <MathJS/>

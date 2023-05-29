@@ -3,6 +3,7 @@ import { FetchData } from "./components/FetchData";
 import { Home } from "./components/Home";
 import { Comps } from "./components/Comps";
 import { Area_Chart_Page_Component } from "./components/Area_Chart_1_Page";
+import { SpacialChart } from "./components/SpacialChart";
 
 const AppRoutes = [
   {
@@ -26,6 +27,10 @@ const AppRoutes = [
   {
     path: '/Area_Chart_1_Page',
     element: <Area_Chart_Page_Component />
+  },
+  {
+    path: '/SpacialChart',
+    element: <SpacialChart />
   }
 ];
 

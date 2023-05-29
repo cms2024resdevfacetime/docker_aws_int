@@ -95,6 +95,7 @@ export class Chart extends Component {
         wrapperStyle={style}
       />
     </RadialBarChart>
+    
     );
   }
 }

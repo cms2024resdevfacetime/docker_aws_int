@@ -3,6 +3,7 @@ import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from '
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
 
+
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
 
@@ -49,7 +50,11 @@ export class NavMenu extends Component {
               </NavItem>
               
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/Area_Chart_1_Page">Pie Chart</NavLink>
+                <NavLink tag={Link} className="text-dark" to="/Area_Chart_1_Page">Argon Component</NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/SpacialChart">Spacial Chart</NavLink>
               </NavItem>
 
 
