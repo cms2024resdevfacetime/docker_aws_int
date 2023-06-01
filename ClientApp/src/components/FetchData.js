@@ -13,7 +13,10 @@ export class FetchData extends Component {
   }
 
   static renderForecastsTable(forecasts) {
-    return (
+      return (
+
+
+
       <table className='table table-striped' aria-labelledby="tabelLabel">
         <thead>
           <tr>
@@ -33,11 +36,15 @@ export class FetchData extends Component {
             </tr>
           )}
         </tbody>
-      </table>
+          </table>
+
+
     );
   }
 
-  render() {
+    render() {
+
+
     let contents = this.state.loading
       ? <p><em>Loading...</em></p>
       : FetchData.renderForecastsTable(this.state.forecasts);
@@ -47,9 +54,13 @@ export class FetchData extends Component {
         <h1 id="tabelLabel" >Weather forecast</h1>
         <p>This component demonstrates fetching data from the server.</p>
         {contents}
-      </div>
+        </div>
+
+
     );
   }
+
+
 
   async populateWeatherData() {
     const response = await fetch('weatherforecast');

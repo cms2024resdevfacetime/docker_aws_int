@@ -1,3 +1,4 @@
+using ServiceStack;
 namespace docker_aws_int
 {
     public class WeatherForecast
