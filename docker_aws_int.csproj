@@ -14,7 +14,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Accord" Version="3.8.2-alpha" />
+    <PackageReference Include="Accord.MachineLearning" Version="3.8.2-alpha" />
+    <PackageReference Include="Accord.Math" Version="3.8.2-alpha" />
     <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-preview.4.23259.3" />
     <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -26,20 +30,15 @@
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
     <Content Remove="docker_aws_int_applications\cci\**" />
-    <Content Remove="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\**" />
     <None Remove="$(SpaRoot)**" />
     <None Remove="docker_aws_int_applications\cci\**" />
-    <None Remove="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="docker_aws_int_applications\cci\**" />
-    <Compile Remove="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\**" />
     <EmbeddedResource Remove="docker_aws_int_applications\cci\**" />
-    <EmbeddedResource Remove="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\**" />
     <TypeScriptCompile Remove="docker_aws_int_applications\cci\**" />
-    <TypeScriptCompile Remove="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,7 +49,6 @@
     <Content Include="bin\Debug\net6.0\package-lock.json" />
     <Content Include="bin\Debug\net6.0\package.json" />
     <Content Include="bin\Debug\net6.0\spa.proxy.json" />
-    <Content Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\CCILibrary.deps.json" />
     <Content Include="node_modules\%40babel\runtime\helpers\esm\package.json" />
     <Content Include="node_modules\%40babel\runtime\package.json" />
     <Content Include="node_modules\%40types\d3-array\package.json" />
@@ -217,17 +215,6 @@
     <None Include="bin\Debug\net6.0\ServiceStack.Text.dll" />
     <None Include="bin\Debug\net6.0\System.Drawing.Common.dll" />
     <None Include="docker_aws_int.sln" />
-    <None Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\CCILibrary.dll" />
-    <None Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\CCILibrary.pdb" />
-    <None Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\Microsoft.Cci.ILGenerator.dll" />
-    <None Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\Microsoft.Cci.MetadataHelper.dll" />
-    <None Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\Microsoft.Cci.MetadataModel.dll" />
-    <None Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\Microsoft.Cci.MutableMetadataModel.dll" />
-    <None Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\Microsoft.Cci.PdbReader.dll" />
-    <None Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\Microsoft.Cci.PdbWriter.dll" />
-    <None Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\Microsoft.Cci.PeReader.dll" />
-    <None Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\Microsoft.Cci.PeWriter.dll" />
-    <None Include="docker_aws_int_integrated_systems\cci\netstandard2.0\publish\Microsoft.Cci.SourceModel.dll" />
     <None Include="node_modules\%40babel\runtime\helpers\applyDecoratedDescriptor.js" />
     <None Include="node_modules\%40babel\runtime\helpers\applyDecs.js" />
     <None Include="node_modules\%40babel\runtime\helpers\applyDecs2203.js" />
@@ -2624,6 +2611,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\src\components\Modules\SpectralGraph\" />
+    <Folder Include="docker_aws_int_integrated_systems\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
