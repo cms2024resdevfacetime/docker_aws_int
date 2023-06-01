@@ -4,11 +4,11 @@ namespace docker_aws_int
 {
 
     [Route ("/helo/{Name}")]
-    public class Hello : IReturn<HelloResponse>
+    public class ServiceStackModel : IReturn<HelloResponse>
     {
         public string Name {get; set;}
     }
-    public class HelloResponse 
+    public class ServiceStackModelResponse 
     {
     public string Result { get; set; }
     }
