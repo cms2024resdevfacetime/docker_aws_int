@@ -2611,7 +2611,12 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\src\components\Modules\SpectralGraph\" />
-    <Folder Include="docker_aws_int_integrated_systems\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DesignPatter_MainSubSystem_Merged">
+      <HintPath>..\docker_aws_int_applications_sandbox\DesignPattern\DesignPatternLib\DesignPatter_MainSubSystem_Merged.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
