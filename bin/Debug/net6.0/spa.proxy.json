@@ -2,7 +2,11 @@
 "SpaProxyServer": {
 "ServerUrl": "https://localhost:44454",
 "LaunchCommand": "npm start",
+<<<<<<< HEAD
 "WorkingDirectory": "C:\\Users\\LENOVO\\Source\\Repos\\docker_aws_int6.7.2023.3.12.am\\ClientApp\\",
+=======
+"WorkingDirectory": "C:\\Users\\cms20\\Source\\Repos\\6.1.2023.12.43\\ClientApp\\",
+>>>>>>> af3902871081014aeb3281030c14ff9389ead6bd
 "MaxTimeoutInSeconds": "120"
 }
 }
