@@ -202,6 +202,7 @@
 
   <ItemGroup>
     <None Include="bin\Debug\net6.0\docker_aws_int.dll" />
+     <None Include="./docker_aws_int_integrated_systems/DesignPatter_MainSubSystemMerged.dll" />
     <None Include="bin\Debug\net6.0\docker_aws_int.exe" />
     <None Include="bin\Debug\net6.0\docker_aws_int.pdb" />
     <None Include="bin\Debug\net6.0\Microsoft.AspNetCore.SpaProxy.dll" />

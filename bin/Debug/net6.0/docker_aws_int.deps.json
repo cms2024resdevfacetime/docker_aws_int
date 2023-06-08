@@ -14,8 +14,7 @@
           "Microsoft.AspNetCore.SpaProxy": "6.0.15",
           "Microsoft.EntityFrameworkCore": "8.0.0-preview.4.23259.3",
           "Microsoft.TypeScript.MSBuild": "5.0.4",
-          "ServiceStack": "6.8.0",
-          "DesignPatter_MainSubSystem_Merged": "1.0.0.0"
+          "ServiceStack": "6.8.0"
         },
         "runtime": {
           "docker_aws_int.dll": {}
@@ -304,15 +303,7 @@
         }
       },
       "System.Memory/4.5.5": {},
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
-      "DesignPatter_MainSubSystem_Merged/1.0.0.0": {
-        "runtime": {
-          "DesignPatter_MainSubSystem_Merged.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      }
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {}
     }
   },
   "libraries": {
@@ -523,11 +514,6 @@
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
-    },
-    "DesignPatter_MainSubSystem_Merged/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

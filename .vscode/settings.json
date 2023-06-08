@@ -1,0 +1,3 @@
+{
+    "dotnet.defaultSolution": "docker_aws_int.sln"
+}

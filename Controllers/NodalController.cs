@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using DesignPatter_MainSubSystem;
+//using DesignPatter_MainSubSystem;
 using System;
 using System.IO;
 using System.Reflection;
@@ -9,7 +9,9 @@ using Accord.MachineLearning;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Net.WebSockets;
-
+using docker_aws_int.ControllerApi;
+using docker_aws_int.Models;   
+using docker_aws_int.ControllerApi;
 
 namespace docker_aws_int.Controllers
 {
@@ -22,32 +24,29 @@ namespace docker_aws_int.Controllers
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-        private readonly ILogger<WeatherForecastController> _logger;
 
-        public NodalController(ILogger<WeatherForecastController> logger)
+        [HttpPost("/ExampleObject_Request")]
+        public IActionResult CreateExampleObject_Request(CreateExampleObject_Request request)
         {
-            _logger = logger;
+            var exampleObjectConcreteClient = new ExampleObject_Concrete_Client(
+                request.stringvalue,
+                request.numericalvalue,
+                request.statistic,
+                request.DataSet1,
+                request.DataSet2,
+                request.DataSet3
+                 );
+                 var response = new CreateExampleObject_Response(
+                    request.stringvalue,
+                    request.numericalvalue,
+                    request.statistic,
+                    request.DataSet1,
+                    request.DataSet2,
+                    request.DataSet3
+
+                 );
+            return Ok(vlaue:response);
         }
-
-
-
-
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
-        {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
-        }
-
-
-
-
-
 
         // Pramiry Application Entry 
         public class ExampleObject_Program
@@ -67,7 +66,8 @@ namespace docker_aws_int.Controllers
         }
 
         //Example Object Class
-        public abstract class ExampleObject_
+
+        public class ExampleObject_
         {
             //Here is the instanciatio of the nested object as
             //part of the object constructor
@@ -107,8 +107,12 @@ namespace docker_aws_int.Controllers
         //REQUIRED: The object must be public abstract class
         public class ExampleObject_Concrete : ExampleObject_
         {
-            //The Concrete Objects Constrctor
             public ExampleObject_Concrete()
+            {
+            }
+
+            //The Concrete Objects Constrctor
+            public ExampleObject_Concrete(string stringvalue, int numericalvalue, int statistic)
             {
             }
             public override void Operation()
@@ -381,7 +385,7 @@ namespace docker_aws_int.Controllers
                     //Lets get the name of the generated library and assign 
                     //Create a library called stringvalue_ and some property data
                     //Then lets assign the result
-                    this.AssemballyName_ = DesignPatter_MainSubSystem.Program.DesignPatter_MainSubSystem_entry_Phase1(Compoenent_, stringvalue_, Statistic_, ConditionalFlag_);
+                    //this.AssemballyName_ = DesignPatter_MainSubSystem.Program.DesignPatter_MainSubSystem_entry_Phase1(Compoenent_, stringvalue_, Statistic_, ConditionalFlag_);
 
                     //Then lets verify the updated values have been implemented to the instance object
                     Console.WriteLine("Incoming Application____ Phase1 after complete Method 1..." + this.AssemballyName_);
